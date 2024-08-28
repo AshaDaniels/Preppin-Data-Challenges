@@ -11,7 +11,7 @@
 -- Techniques:
 -- 1. UNION and UNION ALL
 -- 2. PIVOT columns to rows
--- 3. Using ROW_NUMBER() to remove duplicates
+-- 3. Remove duplicates
   
 WITH CUSTOMER_CTE AS(
     SELECT *, 'pd2023_wk04_january' AS table_name FROM pd2023_wk04_january
