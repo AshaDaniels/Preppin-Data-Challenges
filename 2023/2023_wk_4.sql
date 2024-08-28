@@ -1,3 +1,8 @@
+-- Techniques:
+-- 1. UNION and UNION ALL
+-- 2. PIVOT columns to rows
+-- 3. Remove duplicates
+
 -- We want to stack the tables on top of one another, since they have the same fields in each sheet. We can do this one of 2 ways:
 -- Drag each table into the canvas and use a union step to stack them on top of one another
 -- Use a wildcard union in the input step of one of the tables
@@ -7,11 +12,6 @@
 -- Make sure all the data types are correct for each field
 -- Remove duplicates
 -- If a customer appears multiple times take their earliest joining date
-
--- Techniques:
--- 1. UNION and UNION ALL
--- 2. PIVOT columns to rows
--- 3. Remove duplicates
   
 WITH CUSTOMER_CTE AS(
     SELECT *, 'pd2023_wk04_january' AS table_name FROM pd2023_wk04_january
