@@ -1,3 +1,8 @@
+-- Techniques:
+-- 1. Aggregating data and GROUP BY
+-- 2. Editing strings with REPLACE and converting them to integers (numerical values)
+-- 3. Common Table Expressions (CTEs) and multi-key joins
+
 -- For the transactions file:
 -- Filter the transactions to just look at DSB 
 -- These will be transactions that contain DSB in the Transaction Code field
