@@ -1,0 +1,14 @@
+-- This code creates bank account numbers via the below
+-- INNER JOIN
+-- String Concatenation
+-- String Manipulation
+-- Data Type Conversion
+
+SELECT 
+    'GB' || CHECK_DIGITS || SWIFT_CODE || REPLACE(SORT_CODE, '-', '') || TO_VARCHAR(ACCOUNT_NUMBER) AS CONCATENATED_SORT_CODE
+FROM 
+    PD2023_WK02_TRANSACTIONS AS TRANSACTIONS
+INNER JOIN 
+    PD2023_WK02_SWIFT_CODES AS SWIFT_CODES 
+    ON SWIFT_CODES.BANK = TRANSACTIONS.BANK
+LIMIT 5;
